@@ -21,6 +21,4 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, basicconcepts.Exercice())
     fmt.Fprintln(res, basicconcepts.Exercice2())
     fmt.Fprintln(res, "fin test")
-    
-    
 }
