@@ -34,15 +34,15 @@ func Exercice2() string {
     fmt.Println("Si se intenta abrir un archivo que existe, GOLANG imprimir- un valor que indicara la referencia del objeto :")
     fmt.Println(os.Open("2file.txt"))
     
-  /*  
+    
     data := make([]byte, 100)
     //count, err := file.Read(data)
-    count, err := os.Open("2file.txt")//file.Read(data)
+    count, err := file.Read(data)
     if err != nil {
 	    //log.Fatal(err)
     }
     fmt.Printf("read %d bytes: %q\n", count, data[:count])
-*/
+
     fmt.Println("Or access the network:")
     fmt.Println(net.Dial("tcp", "google.com"))
      
