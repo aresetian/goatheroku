@@ -39,9 +39,13 @@ func Exercice2() string {
     fmt.Println("otro intento de 2file:")
     body, err := ioutil.ReadFile("2file.txt")
     		if err != nil {
+    		    fmt.Println("errror 2file:")
     		//	return nil, err
+    		fmt.Println(err)
     		}
+    		 fmt.Println("OK 2file:")
     		fmt.Println(body)
+    		fmt.Println("END OK 2file:")
     	//	return &Page{Title: title, Body: body}, nil
     /*
     data := make([]byte, 100)
