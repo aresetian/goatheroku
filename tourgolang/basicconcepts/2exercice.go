@@ -13,6 +13,7 @@ import (
     "fmt"
     "net"
     "os"
+    "io/ioutil"
     "time"
     
    
@@ -21,7 +22,7 @@ import (
 // En GOLANG no existen clases como en otros lenguajes(Java), en GOLANG solo existen funciones y estructuras, para este caso solo se define una funci-n, las estructuras se ver-an en otros ejemplos.
 // recordar que la funci-n con nombre main es especial y es el punto de entrada a una aplicaci-n, el equivalente en Java a el m-todo"public static void main(String[] arg)"
 func Exercice2() string {
-    
+   
     // debido a que ya importamos lso paquetes fmt,net,os y time para usarlos solo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
     
     fmt.Println("Bienvenido a ejercicio 2 del Tour de GOLANG!")
@@ -35,6 +36,14 @@ func Exercice2() string {
     fmt.Println(os.Open("2file.txt"))
     
     
+    
+    body, err := ioutil.ReadFile("2file.txt")
+    		if err != nil {
+    		//	return nil, err
+    		}
+    		fmt.Println(body)
+    	//	return &Page{Title: title, Body: body}, nil
+    /*
     data := make([]byte, 100)
     //count, err := file.Read(data)
     count, err := file.Read(data)
@@ -42,6 +51,21 @@ func Exercice2() string {
 	    //log.Fatal(err)
     }
     fmt.Printf("read %d bytes: %q\n", count, data[:count])
+    
+    */
+      /*file, err := os.Open(os.Open("2file.txt"))
+      if err != nil {
+        return err
+      }
+      defer file.Close()
+    
+      var lines []string
+      scanner := bufio.NewScanner(file)
+      for scanner.Scan() {
+        lines = append(lines, scanner.Text())
+      }
+      */
+      
 
     fmt.Println("Or access the network:")
     fmt.Println(net.Dial("tcp", "google.com"))
