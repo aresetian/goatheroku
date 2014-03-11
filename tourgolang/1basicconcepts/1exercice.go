@@ -2,7 +2,7 @@
   Para los usuarios de Java la paqueteria no indica  la ruta fisica que se acostumbra a crear en los archivos .java, en GOLANG.
   la paqueteria es un nombre lógico que no necesariamente debe estar en creada en el disco duro.
 */
-package main
+package 1basicconcepts
 
 // El paquete fmt que puede ser encontrado en http://golang.org/pkg/fmt/ para su an-lisis  es un paquete que permite formatear la escritura y entrada de cadenas en una consola.
 // Todos los paquetes de GOLANG pueden ser encontrados en http://golang.org/pkg/, la anterior ruta es el equivalente a la API de JAVA
