@@ -10,7 +10,7 @@ import "fmt"
 
 // En GOLANG no existen clases como en otros lenguajes(Java), en GOLANG solo existen funciones y estructuras, para este caso solo se define una funci-n, las estructuras se ver-an en otros ejemplos.
 // recordar que la funci-n con nombre main es especial y es el punto de entrada a una aplicaci-n, el equivalente en Java a el m-todo"public static void main(String[] arg)"
-func main() {
+func exercice() {
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
     fmt.Println("Hello my firts line on GOLANG")
 }
