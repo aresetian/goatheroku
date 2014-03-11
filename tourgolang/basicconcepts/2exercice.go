@@ -36,7 +36,7 @@ func Exercice2() string {
     fmt.Println(os.Open("2file.txt"))
     
     
-    
+    fmt.Println("otro intento de 2file:")
     body, err := ioutil.ReadFile("2file.txt")
     		if err != nil {
     		//	return nil, err
