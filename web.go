@@ -16,5 +16,5 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-    fmt.Fprintln(res, "hello, world andres")
+    fmt.Fprintln(res, "hello, world equipo innova")
 }
