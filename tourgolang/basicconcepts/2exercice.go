@@ -46,5 +46,5 @@ func Exercice2() string {
     fmt.Println("Or access the network:")
     fmt.Println(net.Dial("tcp", "google.com"))
      
-     return  os.Open("2file.txt")
+     return  "cambios de string"//os.Open("2file.txt")
 }
