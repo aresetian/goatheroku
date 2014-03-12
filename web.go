@@ -25,7 +25,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
  
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m , a := memory.InsertString(100000)
+    m , a := memory.InsertString(500000)
     fmt.Fprintln(res, a)
     b := memory.AccessString(m);
     m = nil
@@ -55,7 +55,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     */
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de Int</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m4 , a4 := memory.InsertInt(100000)
+    m4 , a4 := memory.InsertInt(500000)
     fmt.Fprintln(res, a4)
     b4 := memory.AccessInt(m4);
     m4 = nil
@@ -84,9 +84,9 @@ func hello(res http.ResponseWriter, req *http.Request) {
    */
    
    
-    fmt.Fprintln(res, "<h2>Prueba  de carga con Arreglos de Int</h2>")
+    fmt.Fprintln(res, "<h2>Prueba  de carga con slice de Int</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m8 , a8 := memory.InsertArrayInt(100000)
+    m8 , a8 := memory.InsertArrayInt(500000)
     fmt.Fprintln(res, a8)
     b8 := memory.AccessArrayInt(m8);
     m8 = nil
