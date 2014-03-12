@@ -10,7 +10,7 @@ type Usuario struct {
 
 var m map[string]Usuario
 
-func PruebaMemoria500mil() string {
+func PruebaMemoria500mil() map[string]Usuario {
 
     tiempo1 := time.Second
     m = make(map[string]Usuario)
@@ -48,5 +48,5 @@ func PruebaMemoria500mil() string {
     fmt.Println("pruebaMemoria500mil tiempo total : " , (tiempo2 - tiempo1))
     
     respuesta := tiempo2 - tiempo1
-    return   string(respuesta)
+    return   m
 }

@@ -6,7 +6,7 @@ import (
     )
 
 
-func PruebaMemoriaMillon() string {
+func PruebaMemoriaMillon() map[string]Usuario {
 
     tiempo1 := time.Second
     m = make(map[string]Usuario)
@@ -44,5 +44,5 @@ func PruebaMemoriaMillon() string {
     fmt.Println("PruebaMemoriaMillon tiempo total : " , (tiempo2 - tiempo1))
     
     respuesta := tiempo2 - tiempo1
-    return   string(respuesta)
+    return   m
 }
