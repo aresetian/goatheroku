@@ -10,7 +10,7 @@ type Usuario struct {
 
 var m map[string]Usuario
 
-func PruebaMemoria500mil() map[string]Usuario {
+func PruebaMemoria500mil(param int) map[string]Usuario {
 
     tiempo1 := time.Second
     m = make(map[string]Usuario)
@@ -24,7 +24,7 @@ func PruebaMemoria500mil() map[string]Usuario {
     }*/
 
 
-    for i := 0; i < 500000; i++ {
+    for i := 0; i < param; i++ {
         str := "name" 
         str += string(i)
         str2 := "dir" 
@@ -36,7 +36,7 @@ func PruebaMemoria500mil() map[string]Usuario {
     
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
     
-    for i := 0; i < 500000; i++ {
+    for i := 0; i < param; i++ {
         key := "key" 
         key += string(i)
         
