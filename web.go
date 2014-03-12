@@ -22,6 +22,6 @@ func hello(res http.ResponseWriter, req *http.Request) {
 //    fmt.Fprintln(res, basicconcepts.Exercice())
 //    fmt.Fprintln(res, basicconcepts.Exercice2())
     fmt.Fprintln(res, "Prueba con 100000 structuras")
-    fmt.Fprintln(res, benchmark.PruebaMemoria100mil())
+    fmt.Fprintln(res, memory.PruebaMemoria100mil())
     fmt.Fprintln(res, "fin test")
 }
