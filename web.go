@@ -26,11 +26,11 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "100000 structuras")
     m , a := memory.InsertString(100000)
     fmt.Fprintln(res, a)
-    /*
+    
     b := memory.AccessString(m);
     m = nil
     fmt.Fprintln(res, b)
-    
+    /*
     fmt.Fprintln(res, "500000 structuras")
     m1 , a1 := memory.InsertString(500000)
     fmt.Fprintln(res, a1)
