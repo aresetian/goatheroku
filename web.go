@@ -11,8 +11,8 @@ import (
 func main() {
     http.HandleFunc("/", hello)
     fmt.Println("listening...")
-    //err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-    err := http.ListenAndServe(":9999", nil)
+    err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+    //err := http.ListenAndServe(":9999", nil)
     if err != nil {
       panic(err)
     }
@@ -22,16 +22,16 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Benchmark Innova4j")
     fmt.Fprintln(res, "")
 
- /*
+ 
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m , a := memory.InsertString(1000)
+    m , a := memory.InsertString(50000)
     fmt.Fprintln(res, a)
-    
     b := memory.AccessString(m);
     m = nil
     fmt.Fprintln(res, b)
     
+    /*
     fmt.Fprintln(res, "500000 structuras")
     m1 , a1 := memory.InsertString(500000)
     fmt.Fprintln(res, a1)
@@ -52,15 +52,15 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b3 := memory.AccessString(m3);
     m3 = nil
     fmt.Fprintln(res, b3)
-    /*
+    */
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de Int</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m4 , a4 := memory.InsertInt(1000)
+    m4 , a4 := memory.InsertInt(50000)
     fmt.Fprintln(res, a4)
     b4 := memory.AccessInt(m4);
     m4 = nil
     fmt.Fprintln(res, b4)
-    
+    /*
     fmt.Fprintln(res, "500000 structuras")
     m5 , a5 := memory.InsertInt(500000)
     fmt.Fprintln(res, a5)
@@ -86,7 +86,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
    
     fmt.Fprintln(res, "<h2>Prueba  de carga con Arreglos de Int</h2>")
     fmt.Fprintln(res, "100000 structuras")
-    m8 , a8 := memory.InsertArrayInt(1000)
+    m8 , a8 := memory.InsertArrayInt(50000)
     fmt.Fprintln(res, a8)
     b8 := memory.AccessArrayInt(m8);
     m8 = nil
