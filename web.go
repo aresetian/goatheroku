@@ -20,13 +20,13 @@ func main() {
 func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Benchmark Innova4j")
     fmt.Fprintln(res, "")
-/*
+
 
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
     fmt.Fprintln(res, "100000 structuras")
     m , a := memory.InsertString(100000)
     fmt.Fprintln(res, a)
-    
+    /*
     b := memory.AccessString(m);
     m = nil
     fmt.Fprintln(res, b)
