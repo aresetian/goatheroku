@@ -2,7 +2,7 @@ package memory
 
 import (
     "time"
-    "fmt"
+    //"fmt"
     
     )
 type Usuario struct {
@@ -17,7 +17,10 @@ func AccessInt(mapa map[int64]Usuario)  time.Duration {
    
  
     for i := 0; i < len(mapa); i++ {
-        fmt.Println("AccessInt : " , mapa[int64(i)])
+        
+        str :=  mapa[int64(i)]
+        mapa[int64(i)] = str
+        //fmt.Println("AccessInt : " , mapa[int64(i)])
     }
     
     return   time.Now().Sub(tiempo1)

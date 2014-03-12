@@ -2,7 +2,7 @@ package memory
 
 import (
     "time"
-    "fmt"
+    //"fmt"
     )
 
 func AccessArrayInt(arreglo []Usuario)  time.Duration {
@@ -11,7 +11,10 @@ func AccessArrayInt(arreglo []Usuario)  time.Duration {
    
  
     for i := 0; i < len(arreglo); i++ {
-        fmt.Println("AccessString : " , arreglo[i])
+        
+        jota := arreglo[i] 
+        arreglo[i] = jota
+        //fmt.Println("AccessString : " , arreglo[i])
     }
     return   time.Now().Sub(tiempo1)
 }
