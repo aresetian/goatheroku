@@ -3,6 +3,8 @@ package memory
 import (
     "time"
     "fmt"
+    "strconv"
+    
     )
 type Usuario struct {
     name, dir string
@@ -10,7 +12,7 @@ type Usuario struct {
 
 var m map[string]Usuario
 
-func PruebaMemoria500mil(param int) map[string]Usuario {
+func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
 
     tiempo1 := time.Now()
     m = make(map[string]Usuario)
@@ -26,11 +28,11 @@ func PruebaMemoria500mil(param int) map[string]Usuario {
 
     for i := 0; i < param; i++ {
         str := "name" 
-        str += string(i)
+        str += strconv.Itoa(i)
         str2 := "dir" 
-        str2 += string(i)
+        str2 += strconv.Itoa(i)
         key := "key" 
-        key += string(i)
+        key += strconv.Itoa(i)
         m[key] = Usuario{ str, str2}
     }
     
@@ -45,8 +47,8 @@ func PruebaMemoria500mil(param int) map[string]Usuario {
     
     //tiempo2 := time.Second
     
-    fmt.Println("pruebaMemoria500mil tiempo total : " , time.Now().Sub(tiempo1))
+    fmt.Println("pruebaMemoria %d tiempo total : " , param , time.Now().Sub(tiempo1))
     
     //respuesta := tiempo2 - tiempo1
-    return   m
+    return   m , time.Now().Sub(tiempo1)
 }
