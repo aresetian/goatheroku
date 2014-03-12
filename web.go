@@ -5,7 +5,7 @@ import (
     "net/http"
     "os"
     //"github.com/aresetian/goatheroku/tourgolang/basicconcepts"
-    "github.com/aresetian/goatheroku/benchmark/memory"
+    "github.com/aresetian/goatheroku/benchmark"
 )
 
 func main() {
@@ -23,6 +23,6 @@ func hello(res http.ResponseWriter, req *http.Request) {
 //    fmt.Fprintln(res, basicconcepts.Exercice())
 //    fmt.Fprintln(res, basicconcepts.Exercice2())
     fmt.Fprintln(res, "Prueba con 100000 structuras")
-    fmt.Fprintln(res, memory.PruebaMemoria100mil())
+    fmt.Fprintln(res, benchmark.PruebaMemoria100mil())
     fmt.Fprintln(res, "fin test")
 }

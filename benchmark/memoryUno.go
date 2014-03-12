@@ -1,10 +1,9 @@
 package memory
 
-
-type Usuario struct {
-    name, dir string
-}
-var m := map[string]Usuario
+import (
+    "time"
+    "fmt"
+    )
 
 func PruebaMemoria100mil() string {
 
@@ -21,18 +20,29 @@ func PruebaMemoria100mil() string {
 
 
     for i := 0; i < 100000; i++ {
-        m["" + i] = Usuario{"name" + i, "dir" + 1}
+        str := "name" 
+        str += string(i)
+        str2 := "dir" 
+        str2 += string(i)
+        key := "key" 
+        key += string(i)
+        m[key] = Usuario{ str, str2}
+        
     }
     
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
     
     for i := 0; i < 100000; i++ {
-        fmt.Println("pruebaMemoria100mil : "m["" + i])
+        key := "key" 
+        key += string(i)
+        
+        fmt.Println("pruebaMemoria100mil : " , m[key])
     }
     
     tiempo2 := time.Second
     
-    fmt.Println("pruebaMemoria100mil tiempo total : "  (tiempo2 - tiempo1))
+    fmt.Println("pruebaMemoria100mil tiempo total : " ,  (tiempo2 - tiempo1))
     
-    return   (tiempo2 - tiempo1)
+    respuesta := tiempo2 - tiempo1
+    return   string(respuesta)
 }
