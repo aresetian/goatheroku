@@ -22,7 +22,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Benchmark Innova4j")
     fmt.Fprintln(res, "")
 
-
+ /*
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
     fmt.Fprintln(res, "100000 structuras")
     m , a := memory.InsertString(1000)
@@ -31,7 +31,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b := memory.AccessString(m);
     m = nil
     fmt.Fprintln(res, b)
-     /*
+    
     fmt.Fprintln(res, "500000 structuras")
     m1 , a1 := memory.InsertString(500000)
     fmt.Fprintln(res, a1)
@@ -52,7 +52,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b3 := memory.AccessString(m3);
     m3 = nil
     fmt.Fprintln(res, b3)
-    */
+    /*
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de Int</h2>")
     fmt.Fprintln(res, "100000 structuras")
     m4 , a4 := memory.InsertInt(1000)
@@ -60,7 +60,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b4 := memory.AccessInt(m4);
     m4 = nil
     fmt.Fprintln(res, b4)
-    /*
+    
     fmt.Fprintln(res, "500000 structuras")
     m5 , a5 := memory.InsertInt(500000)
     fmt.Fprintln(res, a5)
