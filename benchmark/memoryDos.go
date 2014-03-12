@@ -46,7 +46,7 @@ func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
     }*/
     
     //tiempo2 := time.Second
-    fmt.Printf(" m[200]" ,m["key200"] )
+   // fmt.Printf(" m[200]" ,m["key200"] )
     
     fmt.Printf("pruebaMemoria %d tiempo total : " , param , time.Now().Sub(tiempo1))
     

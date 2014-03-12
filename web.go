@@ -25,19 +25,19 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Prueba  de carga con 100000 structuras")
     //fmt.Fprintln(res, memory.PruebaMemoria100mil())
     m , a := memory.PruebaMemoria(100000)
-    m= nil
+    //m= nil
     fmt.Fprintln(res, m)
     fmt.Fprintln(res, a)
     
     fmt.Fprintln(res, "Prueba  de carga con 500000 structuras")
     m1 , a1 := memory.PruebaMemoria(500000)
-    m1= nil
+    //m1= nil
     fmt.Fprintln(res, m1)
     fmt.Fprintln(res, a1)
     
     fmt.Fprintln(res, "Prueba  de carga con 1000000 structuras")
     m2 , a2 := memory.PruebaMemoria(1000000)
-    m2= nil
+    //m2= nil
     fmt.Fprintln(res, m2)
     fmt.Fprintln(res, a2)
     //fmt.Fprintln(res, memory.PruebaMemoria500mil(100000))
