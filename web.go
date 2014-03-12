@@ -18,30 +18,68 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-   // fmt.Fprintln(res, "hello, world equipo innova otro")
     fmt.Fprintln(res, "Benchmark Innova4j")
-//    fmt.Fprintln(res, basicconcepts.Exercice())
-//    fmt.Fprintln(res, basicconcepts.Exercice2())
-    fmt.Fprintln(res, "Prueba  de carga con 100000 structuras")
-    //fmt.Fprintln(res, memory.PruebaMemoria100mil())
-    m , a := memory.PruebaMemoria(100000)
-    //m= nil
-    fmt.Fprintln(res, m)
+    fmt.Fprintln(res, "")
+
+
+    fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
+    fmt.Fprintln(res, "100000 structuras")
+    m , a := memory.InsertString(100000)
     fmt.Fprintln(res, a)
     
-    fmt.Fprintln(res, "Prueba  de carga con 500000 structuras")
-    m1 , a1 := memory.PruebaMemoria(500000)
-    //m1= nil
-    fmt.Fprintln(res, m1)
-    fmt.Fprintln(res, a1)
+    b := memory.AccessString(m);
+    m = nil
+    fmt.Fprintln(res, b)
     
-    fmt.Fprintln(res, "Prueba  de carga con 1000000 structuras")
-    m2 , a2 := memory.PruebaMemoria(1000000)
-    //m2= nil
-    fmt.Fprintln(res, m2)
+    fmt.Fprintln(res, "500000 structuras")
+    m1 , a1 := memory.InsertString(500000)
+    fmt.Fprintln(res, a1)
+    b1 := memory.AccessString(m1);
+    m1 = nil
+    fmt.Fprintln(res, b1)
+    
+    fmt.Fprintln(res, "1000000 structuras")
+    m2 , a2 := memory.InsertString(1000000)
     fmt.Fprintln(res, a2)
-    //fmt.Fprintln(res, memory.PruebaMemoria500mil(100000))
-    //fmt.Fprintln(res, memory.PruebaMemoriaMillon())
-    //fmt.Fprintln(res, memory.PruebaMemoria500mil(2))
+    b2 := memory.AccessString(m2);
+    m2 = nil
+    fmt.Fprintln(res, b2)
+    
+    fmt.Fprintln(res, "5000000 structuras")
+    m3 , a3 := memory.InsertString(50000000)
+    fmt.Fprintln(res, a3)
+    b3 := memory.AccessString(m3);
+    m3 = nil
+    fmt.Fprintln(res, b3)
+    
+    fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de Int</h2>")
+    fmt.Fprintln(res, "100000 structuras")
+    m4 , a4 := memory.InsertInt(100000)
+    fmt.Fprintln(res, a4)
+    b4 := memory.AccessInt(m4);
+    m4 = nil
+    fmt.Fprintln(res, b4)
+    
+    fmt.Fprintln(res, "500000 structuras")
+    m5 , a5 := memory.InsertInt(500000)
+    fmt.Fprintln(res, a5)
+    b5 := memory.AccessInt(m5);
+    m5 = nil
+    fmt.Fprintln(res, b5)
+    
+    fmt.Fprintln(res, "1000000 structuras")
+    m6 , a6 := memory.InsertInt(1000000)
+    fmt.Fprintln(res, a6)
+    b6 := memory.AccessInt(m6);
+    m6 = nil
+    fmt.Fprintln(res, b6)
+    
+    fmt.Fprintln(res, "5000000 structuras")
+    m7 , a7 := memory.InsertInt(50000000)
+    fmt.Fprintln(res, a7)
+    b7 := memory.AccessInt(m7);
+    m7 = nil
+    fmt.Fprintln(res, b7)
+   
     fmt.Fprintln(res, "fin test")
 }
