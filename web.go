@@ -20,7 +20,7 @@ func main() {
 func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Benchmark Innova4j")
     fmt.Fprintln(res, "")
-
+/*
 
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de String</h2>")
     fmt.Fprintln(res, "100000 structuras")
@@ -79,7 +79,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, a7)
     b7 := memory.AccessInt(m7);
     m7 = nil
-    fmt.Fprintln(res, b7)
+    fmt.Fprintln(res, b7)*/
    
     fmt.Fprintln(res, "fin test")
 }
