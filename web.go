@@ -84,7 +84,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
    */
    
    
-    fmt.Fprintln(res, "<h2>Prueba  de carga con slice de Int</h2>")
+    fmt.Fprintln(res, "<h2>Prueba  de carga con slice de Usuario</h2>")
     fmt.Fprintln(res, "100000 structuras")
     m8 , a8 := memory.InsertArrayInt(500000)
     fmt.Fprintln(res, a8)
