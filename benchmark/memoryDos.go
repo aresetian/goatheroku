@@ -35,13 +35,13 @@ func PruebaMemoria500mil(param int) map[string]Usuario {
     }
     
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
-    
+    /*
     for i := 0; i < param; i++ {
         key := "key" 
         key += string(i)
         
         fmt.Println("pruebaMemoria500mil : " , m[key])
-    }
+    }*/
     
     //tiempo2 := time.Second
     
