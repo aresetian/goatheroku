@@ -15,7 +15,6 @@ func InsertArrayInt(param int) ([]Usuario, time.Duration) {
     arrayUsuarios := make([]Usuario, param)
 
     tiempo1 := time.Now()
-  //  mString = make(map[string]Usuario)
 
     for i := 0; i < param; i++ {
         str := "name" 
