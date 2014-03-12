@@ -12,7 +12,7 @@ var m map[string]Usuario
 
 func PruebaMemoria500mil(param int) map[string]Usuario {
 
-    tiempo1 := time.Second
+    tiempo1 := time.Now()
     m = make(map[string]Usuario)
    /* {
         "Bell Labs": Vertex{
@@ -45,7 +45,7 @@ func PruebaMemoria500mil(param int) map[string]Usuario {
     
     tiempo2 := time.Second
     
-    fmt.Println("pruebaMemoria500mil tiempo total : " , (tiempo2 - tiempo1))
+    fmt.Println("pruebaMemoria500mil tiempo total : " , time.Now().Sub(tiempo1))
     
     //respuesta := tiempo2 - tiempo1
     return   m
