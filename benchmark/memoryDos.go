@@ -43,7 +43,7 @@ func PruebaMemoria500mil(param int) map[string]Usuario {
         fmt.Println("pruebaMemoria500mil : " , m[key])
     }
     
-    tiempo2 := time.Second
+    //tiempo2 := time.Second
     
     fmt.Println("pruebaMemoria500mil tiempo total : " , time.Now().Sub(tiempo1))
     
