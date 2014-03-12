@@ -4,7 +4,6 @@ import (
     "fmt"
     "net/http"
     "os"
-    //"github.com/aresetian/goatheroku/tourgolang/basicconcepts"
     "github.com/aresetian/goatheroku/benchmark"
 )
 
