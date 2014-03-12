@@ -3,19 +3,19 @@ package memory
 import (
     "time"
     "fmt"
-    "strconv"
+    //"strconv"
     
     )
 type Usuario struct {
     name, dir string
 }
 
-var m map[string]Usuario
+var m map[int]Usuario
 
-func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
+func PruebaMemoria(param int) (map[int]Usuario, time.Duration) {
 
     tiempo1 := time.Now()
-    m = make(map[string]Usuario)
+    m = make(map[int]Usuario)
    /* {
         "Bell Labs": Vertex{
             40.68433, -74.39967,
@@ -28,12 +28,12 @@ func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
 
     for i := 0; i < param; i++ {
         str := "name" 
-        str += strconv.Itoa(i)
+        //str += strconv.Itoa(i)
         str2 := "dir" 
-        str2 += strconv.Itoa(i)
-        key := "key" 
-        key += strconv.Itoa(i)
-        m[key] = Usuario{ str, str2}
+        //str2 += strconv.Itoa(i)
+        //key := "key" 
+        //key += strconv.Itoa(i)
+        m[i] = Usuario{ str, str2}
     }
     
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
