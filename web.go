@@ -30,7 +30,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, a)
     
     fmt.Fprintln(res, "Prueba  de carga con 500000 structuras")
-    m1 , a1 := memory.PruebaMemoria(100000)
+    m1 , a1 := memory.PruebaMemoria(500000)
     m1= nil
     fmt.Fprintln(res, m1)
     fmt.Fprintln(res, a1)
