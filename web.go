@@ -66,20 +66,20 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b5 := memory.AccessInt(m5);
     m5 = nil
     fmt.Fprintln(res, b5)
-    
+     */
     fmt.Fprintln(res, "1000000 structuras")
     m6 , a6 := memory.InsertInt(1000000)
     fmt.Fprintln(res, a6)
     b6 := memory.AccessInt(m6);
     m6 = nil
     fmt.Fprintln(res, b6)
-    */
+   /*
     fmt.Fprintln(res, "5000000 structuras")
     m7 , a7 := memory.InsertInt(50000000)
     fmt.Fprintln(res, a7)
     b7 := memory.AccessInt(m7);
     m7 = nil
     fmt.Fprintln(res, b7)
-   
+   */
     fmt.Fprintln(res, "fin test")
 }
