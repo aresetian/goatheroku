@@ -25,7 +25,8 @@ func hello(res http.ResponseWriter, req *http.Request) {
     fmt.Fprintln(res, "Prueba con 100000 structuras")
     //fmt.Fprintln(res, memory.PruebaMemoria100mil())
     m , a := memory.PruebaMemoria(100000)
-    m= nill
+    m= nil
+    fmt.Fprintln(res, m)
     fmt.Fprintln(res, a)
     //fmt.Fprintln(res, memory.PruebaMemoria500mil(100000))
     //fmt.Fprintln(res, memory.PruebaMemoriaMillon())
