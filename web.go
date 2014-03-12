@@ -30,7 +30,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b := memory.AccessString(m);
     m = nil
     fmt.Fprintln(res, b)
-    /*
+    
     fmt.Fprintln(res, "500000 structuras")
     m1 , a1 := memory.InsertString(500000)
     fmt.Fprintln(res, a1)
@@ -44,7 +44,7 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b2 := memory.AccessString(m2);
     m2 = nil
     fmt.Fprintln(res, b2)
-    
+    /*
     fmt.Fprintln(res, "5000000 structuras")
     m3 , a3 := memory.InsertString(50000000)
     fmt.Fprintln(res, a3)
