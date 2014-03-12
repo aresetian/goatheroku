@@ -25,6 +25,6 @@ func hello(res http.ResponseWriter, req *http.Request) {
     //fmt.Fprintln(res, memory.PruebaMemoria100mil())
     //fmt.Fprintln(res, memory.PruebaMemoria500mil(500000))
     //fmt.Fprintln(res, memory.PruebaMemoriaMillon())
-    fmt.Fprintln(res, memory.PruebaMemoria500mil(2))
+    //fmt.Fprintln(res, memory.PruebaMemoria500mil(2))
     fmt.Fprintln(res, "fin test")
 }
