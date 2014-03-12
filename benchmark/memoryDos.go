@@ -10,12 +10,12 @@ type Usuario struct {
     name, dir string
 }
 
-var m map[int]Usuario
+var m map[string]Usuario
 
-func PruebaMemoria(param int) (map[int]Usuario, time.Duration) {
+func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
 
     tiempo1 := time.Now()
-    m = make(map[int]Usuario)
+    m = make(map[string]Usuario)
    /* {
         "Bell Labs": Vertex{
             40.68433, -74.39967,
