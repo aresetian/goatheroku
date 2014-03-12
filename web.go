@@ -66,14 +66,14 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b5 := memory.AccessInt(m5);
     m5 = nil
     fmt.Fprintln(res, b5)
-     */
+     
     fmt.Fprintln(res, "1000000 structuras")
     m6 , a6 := memory.InsertInt(1000000)
     fmt.Fprintln(res, a6)
     b6 := memory.AccessInt(m6);
     m6 = nil
     fmt.Fprintln(res, b6)
-   /*
+   
     fmt.Fprintln(res, "5000000 structuras")
     m7 , a7 := memory.InsertInt(50000000)
     fmt.Fprintln(res, a7)
@@ -81,5 +81,36 @@ func hello(res http.ResponseWriter, req *http.Request) {
     m7 = nil
     fmt.Fprintln(res, b7)
    */
+   
+   
+    fmt.Fprintln(res, "<h2>Prueba  de carga con Arreglos de Int</h2>")
+    fmt.Fprintln(res, "100000 structuras")
+    m8 , a8 := memory.InsertArrayInt(100000)
+    fmt.Fprintln(res, a8)
+    b8 := memory.AccessArrayInt(m8);
+    m8 = nil
+    fmt.Fprintln(res, b8)
+    
+    fmt.Fprintln(res, "500000 structuras")
+    m9 , a9 := memory.InsertArrayInt(500000)
+    fmt.Fprintln(res, a9)
+    b9 := memory.AccessArrayInt(m9);
+    m9 = nil
+    fmt.Fprintln(res, b9)
+     
+    fmt.Fprintln(res, "1000000 structuras")
+    m10 , a10 := memory.InsertArrayInt(1000000)
+    fmt.Fprintln(res, a10)
+    b10 := memory.AccessArrayInt(m10);
+    m10 = nil
+    fmt.Fprintln(res, b10)
+   
+    fmt.Fprintln(res, "5000000 structuras")
+    m11 , a11 := memory.InsertArrayInt(50000000)
+    fmt.Fprintln(res, a11)
+    b11 := memory.AccessArrayInt(m11);
+    m11 = nil
+    fmt.Fprintln(res, b11)
+   
     fmt.Fprintln(res, "fin test")
 }
