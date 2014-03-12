@@ -17,7 +17,7 @@ func AccessInt(mapa map[int64]Usuario)  time.Duration {
    
  
     for i := 0; i < len(mapa); i++ {
-        fmt.Println("AccessInt : " , mapa[i])
+        fmt.Println("AccessInt : " , mapa[int64(i)])
     }
     
     return   time.Now().Sub(tiempo1)
