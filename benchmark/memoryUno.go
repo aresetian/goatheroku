@@ -43,6 +43,6 @@ func PruebaMemoria100mil() map[string]Usuario {
     
     fmt.Println("pruebaMemoria100mil tiempo total : " ,  (tiempo2 - tiempo1))
     
-    respuesta := tiempo2 - tiempo1
+   // respuesta := tiempo2 - tiempo1
     return   m
 }
