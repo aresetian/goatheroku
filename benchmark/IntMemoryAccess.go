@@ -9,9 +9,9 @@ type Usuario struct {
     name, dir string
 }
 
-var m map[int]Usuario
+var m map[int64]Usuario
 
-func AccessInt(mapa map[int]Usuario)  time.Duration {
+func AccessInt(mapa map[int64]Usuario)  time.Duration {
 
     tiempo1 := time.Now()
    

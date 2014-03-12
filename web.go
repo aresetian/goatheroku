@@ -44,14 +44,14 @@ func hello(res http.ResponseWriter, req *http.Request) {
     b2 := memory.AccessString(m2);
     m2 = nil
     fmt.Fprintln(res, b2)
-    */
+    
     fmt.Fprintln(res, "5000000 structuras")
     m3 , a3 := memory.InsertString(50000000)
     fmt.Fprintln(res, a3)
     b3 := memory.AccessString(m3);
     m3 = nil
     fmt.Fprintln(res, b3)
-    
+    */
     fmt.Fprintln(res, "<h2>Prueba  de carga con mapas de Int</h2>")
    /* fmt.Fprintln(res, "100000 structuras")
     m4 , a4 := memory.InsertInt(100000)

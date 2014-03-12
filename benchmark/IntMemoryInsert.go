@@ -5,10 +5,10 @@ import (
     )
 
 
-func InsertInt(param int) (map[int]Usuario, time.Duration) {
+func InsertInt(param int) (map[int64]Usuario, time.Duration) {
 
     tiempo1 := time.Now()
-    m = make(map[int]Usuario)
+    m = make(map[int64]Usuario)
 
 
     for i := 0; i < param; i++ {
