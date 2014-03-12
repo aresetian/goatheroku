@@ -47,7 +47,7 @@ func PruebaMemoria(param int) (map[string]Usuario, time.Duration) {
     
     //tiempo2 := time.Second
     
-    fmt.Println("pruebaMemoria %d tiempo total : " , param , time.Now().Sub(tiempo1))
+    fmt.Printf("pruebaMemoria %d tiempo total : " , param , time.Now().Sub(tiempo1))
     
     //respuesta := tiempo2 - tiempo1
     return   m , time.Now().Sub(tiempo1)
