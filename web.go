@@ -4,7 +4,7 @@ import (
     "fmt"
     "net/http"
     "os"
-    //"github.com/aresetian/goatheroku/benchmark"
+    "github.com/aresetian/goatheroku/benchmark"
 )
 
 func main() {
