@@ -3,7 +3,7 @@ package memory
 import (
     "time"
     "fmt"
-    //"strconv"
+    "strconv"
     
     )
 type Usuario struct {
@@ -28,12 +28,12 @@ func PruebaMemoria(param int) (map[int]Usuario, time.Duration) {
 
     for i := 0; i < param; i++ {
         str := "name" 
-        //str += strconv.Itoa(i)
+        str += strconv.Itoa(i)
         str2 := "dir" 
-        //str2 += strconv.Itoa(i)
-        //key := "key" 
-        //key += strconv.Itoa(i)
-        m[i] = Usuario{ str, str2}
+        str2 += strconv.Itoa(i)
+        key := "key" 
+        key += strconv.Itoa(i)
+        m[key] = Usuario{ str, str2}
     }
     
     // debido a que ya importamos el paquete para usarlo se debe volver colocar el nombre del paquete seguido de un punto y la primera letra de la funci-n a invocar debe estar en mayuscula
@@ -46,6 +46,7 @@ func PruebaMemoria(param int) (map[int]Usuario, time.Duration) {
     }*/
     
     //tiempo2 := time.Second
+    fmt.Printf(" m[200]" ,m["key200"] )
     
     fmt.Printf("pruebaMemoria %d tiempo total : " , param , time.Now().Sub(tiempo1))
     
