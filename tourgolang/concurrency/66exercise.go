@@ -20,10 +20,10 @@ func main() {
     c := make(chan int)
     
     go sum(a[:len(a)/2], c)
-    go sum(a[len(a)/2:], <-c)
+    go sum(a[len(a)/2:], c)
     
    
     
-    x, y := 17 , <-c // receive from c
+    x, y := <-c , <-c // receive from c
     fmt.Println(x, y, x+y)
 }
