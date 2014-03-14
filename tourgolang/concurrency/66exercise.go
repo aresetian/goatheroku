@@ -14,7 +14,7 @@ func suma2( a , b int, c chan int) {
     z := <-c
 }
 
-func main() {
+func Exercise66() {
     
     a := []int{7, 2, 8, -9, 4, 0}
     c := make(chan int)

@@ -25,7 +25,7 @@ func say(s string) {
     }*/
 }
 
-func main() {
+func Exercise65() {
     tiempo1 := time.Now()
    // runtime.GOMAXPROCS(1)
     fmt.Println(runtime.GOMAXPROCS(2))
