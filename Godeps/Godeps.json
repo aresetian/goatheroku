@@ -1,5 +1,11 @@
 {
 	"ImportPath": "github.com/aresetian/goatheroku",
 	"GoVersion": "go1.1.2",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/errplane/errplane-go",
+			"Comment": "v0.2.0-15-gf160aee",
+			"Rev": "f160aee38c00de7101ecb07433f0e20a756ee255"
+		}
+	]
 }
