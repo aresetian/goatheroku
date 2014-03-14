@@ -10,9 +10,7 @@ func sum(a []int, c chan int) {
     c <- sum // send sum to c
 }
 
-func suma2( a , b int, c chan int) {
-    z := <-c
-}
+
 
 func Exercise66() {
     
