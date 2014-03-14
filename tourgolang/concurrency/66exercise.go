@@ -12,7 +12,7 @@ func sum(a []int, c chan int) {
 
 
 
-func Exercise66() {
+func main() {
     
     a := []int{7, 2, 8, -9, 4, 0}
     c := make(chan int)
