@@ -5,7 +5,7 @@ import (
     "net/http"
     //"os"
     "github.com/aresetian/goatheroku/benchmark"
-    "github.com/errplane/errplane-go"
+    //"github.com/errplane/errplane-go"
     "time"
 )
 const (
