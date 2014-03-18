@@ -3,17 +3,17 @@ package main
 import (
     "fmt"
     "net/http"
-    //"os"
-    "github.com/aresetian/goatheroku/benchmark"
+    "os"
+  //  "github.com/aresetian/goatheroku/benchmark"
     //"github.com/errplane/errplane-go"
-    "time"
+    //"time"
 )
-const (
+/*const (
   appKey      = "your app key"
   apiKey      = "your_api_key"
   environment = "development" //"your env key. i.e. development"
   proxy       = "http://127.0.0.1:9999" // "https://127.0.0.1:9500/"
-)
+)*/
 
 
 func main() {
@@ -35,8 +35,8 @@ func main() {
     fmt.Println("listening...")
     err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
     //err2 := http.ListenAndServe(":9999", nil)
-    if err2 != nil {
-      panic(err2)
+    if err != nil {
+      panic(err)
     }
 }
 
