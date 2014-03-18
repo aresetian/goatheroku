@@ -33,8 +33,8 @@ func main() {
     
     http.HandleFunc("/", hello)
     fmt.Println("listening...")
-    err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-    //err2 := http.ListenAndServe(":9999", nil)
+    //err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+    err2 := http.ListenAndServe(":9999", nil)
     if err2 != nil {
       panic(err2)
     }
