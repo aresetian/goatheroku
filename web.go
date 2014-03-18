@@ -6,13 +6,13 @@ import (
     //"os"
     "github.com/aresetian/goatheroku/benchmark"
     "github.com/errplane/errplane-go"
-    //"time"
+    "time"
 )
 const (
   appKey      = "your app key"
   apiKey      = "your_api_key"
-  environment = "your env key. i.e. development"
-  proxy       = "" // "https://127.0.0.1:9500/"
+  environment = "development" //"your env key. i.e. development"
+  proxy       = "http://127.0.0.1:9999" // "https://127.0.0.1:9500/"
 )
 
 
@@ -21,17 +21,20 @@ func main() {
     if proxy != "" {
         ep.SetProxy(proxy)
     }
-    /*
+    
     err := ep.Report("some_metric", 123.4, time.Now(), "some_context", errplane.Dimensions{
       "foo": "bar",
     })
     if err != nil {
       panic(err)
-    }*/
+    }
+    
+    
+    
     http.HandleFunc("/", hello)
     fmt.Println("listening...")
-    //err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-    err2 := http.ListenAndServe(":9999", nil)
+    err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+    //err2 := http.ListenAndServe(":9999", nil)
     if err2 != nil {
       panic(err2)
     }
